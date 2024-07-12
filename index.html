@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
     <title>- 0xmathisd Portfolio -</title>
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
@@ -34,6 +31,7 @@
                 <hr style="font: 1px solid black;margin-left: -15px;color: white;">
             </ul>
             <ul>
+                <h2 style="text-align: center;margin: 0 auto;border-right: 2px solid #ddd;padding-top: 0.3em;color: #e1e1e1;padding-bottom: 0.2em;">Projects</h2>
                 <li><a href="#" id="1" onclick="showProject(1)"><u>Android App</u> : Haguide</a></li>
                 <li><a href="#" id="2" onclick="showProject(2)"><u>Proof of concept</u> : Synchronisation</a></li>
                 <li><a href="#" id="3" onclick="showProject(3)"><u>AI</u> for Connect Four game</a></li>
@@ -59,22 +57,24 @@
         </nav>
         <main class="content">
             <div id="projectContent">
-                <h3>I'm a french junior Dev with a Master's degree in Computer Science and AI. I would like to specialize myself in <b>ambitious</b> and <b>new projects</b>.</h3>
-                <span>
-                    <br>
-                    <h2 style="color:#4a4aff;font-style: italic;font: italic small-caps bold 46px/2 cursive;">
-                        <span style="color:#555656; sans-serif;">
-                        <strong>&lt;</strong>
+                <div style="font-size: 1.3em;">
+                    <h3>I'm a french junior Dev with a Master's degree in Computer Science and AI. I would like to specialize myself in <b>ambitious</b> and <b>new projects</b>. My name is Mathis, Thanks to my technical training and experience, I can assist you with your needs and adapt to develop your IT development projects.</h3>
+                    <span>
+                        <br>
+                        <h2 style="color:#4a4aff;font-style: italic;font: small-caps bold 4em cursive;">
+                            <span style="color:#555656; sans-serif;">
+                            <strong>&lt;</strong>
+                            </span>
+                            Welcome
+                            <span style="color:#555656; sans-serif;">
+                            <strong>/&gt;</strong>
                         </span>
-                        Welcome
-                        <span style="color:#555656; sans-serif;">
-                        <strong>/&gt;</strong>
+                        </h2>
+                        <br>
+                        
                     </span>
-                    </h2>
-                    <br>
-                    
-                </span>
-                <center><h2 style="margin: 12px"><i>Check out some of my projects, you'll discover some of my skills and cool stuff.</i></h2></center>
+                    <center><h2 style="margin: 12px"><i>Check out some of my projects, you'll discover some of my skills and cool stuff.</i></h2></center>
+                    </div>
             </div>
         </main>
     </div>
@@ -93,10 +93,12 @@
             document.getElementById(projectNumber).classList.add("selected");
             if (projectNumber===0){
                 projectContent.innerHTML = `
-                <h3>I'm a french junior Dev with a Master's degree in Computer Science and AI. I would like to specialize myself in <b>ambitious</b> and <b>new projects</b>.</h3>
+                
+                <div style="font-size: 1.3em;">
+                <h3>I'm a french junior Dev with a Master's degree in Computer Science and AI. I would like to specialize myself in <b>ambitious</b> and <b>new projects</b>. My name is Mathis, Thanks to my technical training and experience, I can assist you with your needs and adapt to develop your IT development projects.</h3>
                 <span>
                     <br>
-                    <h2 style="color:#4a4aff;font-style: italic;font: italic small-caps bold 46px/2 cursive;">
+                    <h2 style="color:#4a4aff;font-style: italic;font: small-caps bold 4em cursive;">
                         <span style="color:#555656; sans-serif;">
                         <strong>&lt;</strong>
                         </span>
@@ -109,6 +111,7 @@
                     
                 </span>
                 <center><h2 style="margin: 12px"><i>Check out some of my projects, you'll discover some of my skills and cool stuff.</i></h2></center>
+                </div>
                 `;
             }
             else if (projectNumber===1) {
@@ -252,7 +255,7 @@
                 <h1>Benchmarking Large Language Models for Ethereum Smart Contract Development <span style="color: #0009;">(OPEN-SOURCE)</span></h1>
                 <p>This project provides an automated pipeline to generate smart contracts using Large Language Models with <a href="https://www.ollama.com/">Ollama</a>. The pipeline compiles these smart contracts with the Solidity compiler (solc), analyzes them using <a href="https://github.com/crytic/slither">Slither</a>, and performs unit testing based on the provided test instructions in the prompts. Statistics are then produced to determine the efficiency of each model and various prompts are used to interpret the results.</p>
                 <h2>Pipeline architecture</h2>
-                <figure><img style='width:60%' alt='' class='screenshot' src='https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/pipeline_benchmarking_sol_llm.png' width='400'></figure><br>
+                <figure><img style='width:70%' alt='' class='screenshot' src='https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/pipeline_benchmarking_sol_llm.png' width='400'></figure><br>
                 <h2>Built with</h2>
                 <ul style="font-size: 1.2em;">
                     <li><a href="https://github.com/ollama/ollama">Ollama</a>: Running large language models locally.</li>
