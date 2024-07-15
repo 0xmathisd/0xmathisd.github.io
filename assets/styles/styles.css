@@ -136,7 +136,7 @@ ol ol li {
     flex-grow: 1;
     padding: 2em;
     overflow-y: auto;
-    margin: auto;
+    margin: 1em;
 }
 
 .icons {
