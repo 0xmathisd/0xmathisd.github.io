@@ -142,9 +142,13 @@ ol ol li {
 }
 
 .icons {
-	fill: #fff;
+    fill: #fff;
     margin-left: 1em;
     opacity: 0.8;
+}
+
+.icons a {
+    fill: #fff;
 }
 
 .icons svg:hover {
