@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html data-theme="black" lang="gl">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link href="assets/profile.png" rel="icon" type="image/png">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Portfolio | 0xmathisd</title>
+<style>
+@font-face {
+  font-family: DM Sans Variable;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+}
+
+@font-face {
+  font-family: DM Sans Variable;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+}
+
+.collapse[data-astro-cid-5gutpwss] {
+  transition-duration: .35s;
+  transition-timing-function: ease-in-out
+}
+
+@media (max-width:768px) {
+  .flex-col[data-astro-cid-3ef6ksr2].justify-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+}
+
+body {
+  font-family: DM Sans Variable, sans-serif
+}
+@media only screen and (max-width:480px) {
+  * {
+    font-size: 12px
+  }
+}
+
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 3px
+}
+
+.overflow-y-scroll::-webkit-scrollbar-thumb {
+  background-color: #171717
+}
+
+.overflow-y-scroll {
+  scrollbar-width: 1px
+}
+
+@media (max-width:768px) {
+  .container {
+    flex-direction: column
+  }
+}
+
+
+@media (min-width:768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap
+  }
+}
+
+.prose img {
+  width: 85px;
+  position: absolute;
+  right: 1em;
+  top: 2.7em;
+  border-radius: 0px;
+}
+
+.div-viewFormation {
+   margin-top: 5em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.modal h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+
+.modal h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+.modal .buttons a {
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgba(255,255,255,.9);
+  padding: 4px 20px;
+  margin: 5px;
+    margin-right: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  background: #333;
+}
+
+.modal-content {
+  background-color: #c8c8c8;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.modal-content img {
+  max-width: 100%;
+  min-width: 70%;
+  height: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+pre {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0,0,0,.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0 0 9px;
+  padding: 4.5px;
+  font-family: Monaco,courier new,monospace;
+}
+
+
+.drawer-container {
+    width: 96%;
+    max-width: 800px;
+    margin-top: 1em;
+}
+
+[id^="drawer-toggle"] {
+    display: none;
+}
+
+
+.drawer-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.drawer-button:hover {
+    background-color: #0056b3;
+}
+
+.drawer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    background-color: white;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-y: auto; /* Pour permettre le défilement vertical */
+}
+
+.drawer-content {
+  padding: 20px;
+  height: auto;
+  width: auto;
+}
+
+[id^="drawer-toggle"]:checked + .drawer-button + .drawer {
+    max-height: 500px; /* Hauteur maximale du tiroir lorsqu'il est ouvert */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+</style>
+
+    <link href="assets/style.css" rel="stylesheet">
+  </head>
+  <body class="flex flex-col min-h-screen" style="background-color: #095479;">
+
+    
+    <header class="mx-auto pb-2 pt-6 relative" style="display: flex;">
+      <div class="flex-shrink-0 overflow-hidden shadow-sm w-20" style="flex: 30%;margin-right: 1em;">
+        <img alt="avatar" class="grayscale-[50] hover:grayscale-0"  src="assets/profile.png">
+      </div>
+      <div class="text-center" style="flex: 50%;margin-top: 1.8em;;margin-left: 1em;">
+        <div class="flex items-center justify-center mb-2 md:justify-between relative" >
+          <h1 class="font-extrabold tracking-tight md:text-3xl relative text-3xl w-full" >Mathis Durand<div class="ml-2 -mt-4 absolute center-full top-0" ></div>
+          </h1>
+        </div>
+        <h2 class="text-lg mb-2" >French Developper | 🇫🇷 Master degree</h2>
+      </div>
+    </header>
+
+    <div class="flex divider flex-nowrap h-fit max-w-3xl mx-auto w-[95vw]"></div>
+  
+    <main class="grid flex-grow max-h-[90vh] max-w-3xl md:max-h-[70vh] mx-auto overflow-y-scroll py-2 w-[95vw]">
+      <div class="container">
+        <div class="gap-1 join join-vertical">
+          <div class="collapse collapse-arrow">
+            <input type="checkbox" aria-label="Career">
+            <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
+              <div class="flex">
+                <svg class="h-8 w-8 mr-4" data-icon="mdi:certificate-outline" height="1em" viewBox="0 0 24 24" width="1em">
+                  <symbol id="ai:mdi:certificate-outline">
+                    <path d="m13 21l2-1l2 1v-7h-4m4-5V7l-2 1l-2-1v2l-2 1l2 1v2l2-1l2 1v-2l2-1m1-7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7v-2H4V5h16v10h-1v2h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-9 5H5V6h6m-2 5H5V9h4m2 5H5v-2h6Z" fill="currentColor"></path>
+                  </symbol>
+                  <use xlink:href="#ai:mdi:certificate-outline"></use>
+                </svg> Career
+              </div>
+            </div>
+            <div class="collapse-content">
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Blockchain Solutions Developer</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">6 months Internship - 2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <img src="assets/Orange_logo.png">
+                        <p>Blockchain monitoring, Consumptions on-chain/off-chain, Consensus, decentralized networks, smart contracts with machine learning, Full Stack Development. Orange Innovation.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Blockchain</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Research</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Fullstack</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">LLM</span>
+                      </div>
+                    </div>
+                    <!--
+                    <div class="justify-self-end self-center">
+                      <a href="https://uniform.unicaen.fr/catalogue/formation/master/6961-master-informatique-p.-a-la-carte-avec-combinaisons-majeures-mineures-optionnelles" target="_blank" class="flex items-center justify-center link link-hover text-right text-sm">View Formation <svg class="h-4 w-4 ml-2" data-icon="carbon:link" height="1em" viewBox="0 0 32 32" width="1em">
+                          <use xlink:href="#ai:carbon:link"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Master's in Computer Science</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2022 - 2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <img src="assets/Unicaen_logo.png">
+                        <p>Algorithms and Intelligent Systems: Artificial Intelligence Option, University of Caen Normandy.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Master</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">AI</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Cyber</span>
+                      </div>
+                    </div>
+                    <div class="div-viewFormation justify-self-end self-center">
+                      <a href="https://uniform.unicaen.fr/catalogue/formation/master/6961-master-informatique-p.-a-la-carte-avec-combinaisons-majeures-mineures-optionnelles" target="_blank" class="flex items-center justify-center link link-hover text-right text-sm">View Formation <svg class="h-4 w-4 ml-2" data-icon="carbon:link" height="1em" viewBox="0 0 32 32" width="1em">
+                        <symbol id="ai:carbon:link">
+                          <path d="M29.25 6.76a6 6 0 0 0-8.5 0l1.42 1.42a4 4 0 1 1 5.67 5.67l-8 8a4 4 0 1 1-5.67-5.66l1.41-1.42l-1.41-1.42l-1.42 1.42a6 6 0 0 0 0 8.5A6 6 0 0 0 17 25a6 6 0 0 0 4.27-1.76l8-8a6 6 0 0 0-.02-8.48" fill="currentColor"></path>
+                          <path d="M4.19 24.82a4 4 0 0 1 0-5.67l8-8a4 4 0 0 1 5.67 0A3.94 3.94 0 0 1 19 14a4 4 0 0 1-1.17 2.85L15.71 19l1.42 1.42l2.12-2.12a6 6 0 0 0-8.51-8.51l-8 8a6 6 0 0 0 0 8.51A6 6 0 0 0 7 28a6.07 6.07 0 0 0 4.28-1.76l-1.42-1.42a4 4 0 0 1-5.67 0" fill="currentColor"></path>
+                        </symbol>
+                        <use xlink:href="#ai:carbon:link"></use>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Web3 Infrastructure Operator</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">1 year Freelance - 2023</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Managed Web3 frontend deployments and migrations, cloud hosting, DNS, SSL, and analytics.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Deployments</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Hosting</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Front-end</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Analytics</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">IT Tutor</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">≈ 50 hours - 2023 </div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <img style="width: 100px" src="assets/tutor_logo.png">
+                        <p>Workshops and help for students in difficulty.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Algorithms</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">C</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">PHP Web Developer</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2 months - 2022</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <img style="width: 130px;" src="assets/Sucralliance_logo.png">
+                        <p>Develop a web-based system parallel to a computer-aided maintenance management system software.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Web</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">PHP</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">SQL</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">JavaScript</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Bachelor's degree, Computer Science</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2019 - 2022</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <img src="assets/Unicaen_logo.png">
+                        <p>Following a Science high school diploma. University of Caen Normandy.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Development</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Algorithms</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Methodology</span>
+                      </div> 
+                    </div>
+                    <div class="div-viewFormation justify-self-end self-center">
+                      <a href="https://uniform.unicaen.fr/catalogue/formation/licences/5615-licence-informatique" target="_blank" class="flex items-center justify-center link link-hover text-right text-sm">View Formation <svg class="h-4 w-4 ml-2" data-icon="carbon:link" height="1em" viewBox="0 0 32 32" width="1em">
+                          <use xlink:href="#ai:carbon:link"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div class="collapse collapse-arrow">
+            <input type="checkbox" aria-label="Personal Projects" active>
+            <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
+              <div class="flex">
+                <svg class="h-8 w-8 mr-4" data-icon="mdi:book-edit-outline" height="1em" viewBox="0 0 24 24" width="1em">
+                  <symbol id="ai:mdi:book-edit-outline">
+                    <path d="M6 20h5v2H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6.3c-.22.12-.43.26-.61.44L18 12.13V4h-5v8l-2.5-2.25L8 12V4H6zm16.85-6.53l-1.32-1.32c-.2-.2-.53-.2-.72 0l-.98.98l2.04 2.04l.98-.98c.2-.19.2-.52 0-.72M13 19.96V22h2.04l6.13-6.12l-2.04-2.05z" fill="currentColor"></path>
+                  </symbol>
+                  <use xlink:href="#ai:mdi:book-edit-outline"></use>
+                </svg> Projects
+              </div>
+            </div>
+            <div class="collapse-content">
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Consumption monitoring platform of blockchains</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Project providing a ready-to-use platform for monitoring and evaluating consumption on blockchain networks.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Fullstack</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Blockchain</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Research</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Private blockchains</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal9">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal9" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Consumption monitoring platform for blockchain development</h1>
+                        <p>Project providing a ready-to-use platform for monitoring and evaluating consumption on blockchain networks.</p>
+                        <h2>Main goal</h2>
+                        <p>Platform specifically focusing on the Ethereum mainnet and a private blockchain testbench. Provide accurate and actionable data on various <b>on-chain</b> &amp; <b>off-chain</b> consumptions, enabling users to better understand and optimize their blockchain operations.</p>
+                        <h2>Key Components</h2>
+                        <ul>
+                            <li style="font-size: 1.5em;"><u>Ethereum Mainnet Consumption Dashboard</u></li>
+                            <ul>
+                              <li>Utilizes client distribution and scientific reports to estimate consumption.</li>
+                              <li>Integrates API data from reputable services into interactive graphs.</li>
+                              <li>Estimates idle network costs, transaction costs, and daily total costs.</li>
+                            </ul>
+                            <br>
+                            <li style="font-size: 1.5em;"><u>Private Blockchain TestBench</u></li>
+                            <ul>
+                                <li>Deploys a private blockchain using servers as physical machines connected to wattmeters.</li>
+                                <li>Implements Grafana and Prometheus for detailed monitoring of both blockchain clients and Raspberry Pi devices.</li>
+                                <li>Provides an interface to configure network parameters, create and manage smart contracts, and track on-chain and off-chain metrics.</li>
+                                <li>Offers easy and reliable deployment with extensive error management and configuration options.</li>
+                            </ul>
+                        </ul>
+                        <h2>Technologies Used</h2>
+                        <table style="margin: 0 auto; font-size: 1.2em;">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Technologies</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Frontend</td>
+                                    <td>Vue3, D3.js</td>
+                                </tr>
+                                <tr>
+                                    <td>Backend</td>
+                                    <td>Flask-API with python</td>
+                                </tr>
+                                <tr>
+                                    <td>Database</td>
+                                    <td>InfluxDB</td>
+                                </tr>
+                                <tr>
+                                    <td>Blockchain</td>
+                                    <td>Web3.py, Geth client, Solidity</td>
+                                </tr>
+                                <tr>
+                                    <td>Monitoring Tools</td>
+                                    <td>Grafana, Prometheus</td>
+                                </tr>
+                                <tr>
+                                    <td>DevOps</td>
+                                    <td>Docker, Git, Docker registry, Git CI/CD</td>
+                                </tr>
+                                <tr>
+                                    <td>Hardware</td>
+                                    <td>Raspberry Pi, wattmeters</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2>Targeted consumptions</h2>
+                        <table style="margin: 0 auto; font-size: 1.2em;border-spacing: 2em 0em;">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Consumptions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Off-chain</td>
+                                    <td>Watts, CPU, GPU, RAM, HD, NET, Hardware</td>
+                                </tr>
+                                <tr>
+                                    <td>On-chain</td>
+                                    <td>Transactions, block processing, mempools, fees, propagations...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Benchmarking LLM for Ethereum Smart Contract Development</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Open-source project automates the generation, compilation, analysis, and testing of smart contracts using Large Language Models with Ollama, producing statistics to evaluate model efficiency based on different prompts.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">LLM</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Blockchain</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Smart contracts</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Pipeline</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal8">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal8" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                          <h1>Benchmarking Large Language Models for Ethereum Smart Contract Development <span style="color: #0009;">(OPEN-SOURCE)</span></h1>
+                          <div class="buttons"><a href="https://github.com/Orange-OpenSource/benchmark_pipeline_solidity_llm" class="app-link app-source-link" target="_blank">Orange-OpenSource</a> </div>
+                          <p>This project created at Orange-Innovation, provides an automated pipeline to generate smart contracts using Large Language Models with <a href="https://www.ollama.com/">Ollama</a>. The pipeline compiles these smart contracts with the Solidity compiler (solc), analyzes them using <a href="https://github.com/crytic/slither">Slither</a>, and performs unit testing based on the provided test instructions in the prompts. Statistics are then produced to determine the efficiency of each model and various prompts are used to interpret the results.</p>
+                          <h2>Pipeline architecture</h2>
+                          <figure><img style="width:70%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/pipeline_benchmarking_sol_llm.png" width="400"></figure><br>
+                          <h2>Built with</h2>
+                          <ul style="font-size: 1.2em;">
+                              <li><a href="https://github.com/ollama/ollama">Ollama</a>: Running large language models locally.</li>
+                              <li><a href="https://github.com/crytic/slither">Slither, the smart contract static analyzer</a>: Slither is a Solidity &amp; Vyper static analysis framework written in Python3.</li>
+                              <li><a href="https://github.com/ethereum/solc-bin">The solidity compiler</a>: build by the Ethereum Foundation.</li>
+                              <li><a href="https://github.com/NomicFoundation/hardhat">Hardhat</a>: Hardhat is an Ethereum development environment for professionals, Built by the Nomic Foundation.</li>
+                          </ul>
+                          <p>Pipeline created in python, running inside a Docker container.</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">AI-enhanced development environment for solidity</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Web platform for comprehensive Solidity project development, featuring a LLM support.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Svelte</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">FlaskAPI</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">LLM</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">llama3</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal6">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal6" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>AI-enhanced development environment for solidity projects</h1>
+                        <p>This application consists of a web IDE enabling the integral development of solidity projects, compilation takes place on a dockeurised back-end and LLM assistance is natively integrated to enable the user to understand, develop or syntactically check the source code. </p>
+                        <h2>This projet run with docker-compose with this stack :</h2>
+                        <ul>
+                            <li>The frontend, which is built with <a href="https://svelte.dev/">Svelte</a>.</li>
+                            <li>The backend is on a debian container, it has an api with <a href="https://flask.palletsprojects.com/en/latest/api/">Flask</a> and compiles solidity projects locally.</li>
+                            <li>The "ollama" service runs a container using the <a href="https://github.com/ollama/ollama/blob/main/docs/docker.md">"ollama/ollama" image</a>, with a health check.</li>
+                            <li>a curl command suite for setting up the desired language model to be used by the ollama service.</li>
+                        </ul>
+                        <h2>What is possible with the app</h2>
+                        <ul>
+                            <li>Develop a solidity, single file or multicontracts project.</li>
+                            <li>Analysis of : contract, function, code.</li>
+                            <li>Compilation from browser.</li>
+                            <li>Writing code to contracts by LLM via user prompts.</li>
+                        </ul>
+                        <br></p><h2>Screenshot :</h2>
+                        <figure>
+                          <img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/solidity_explainer.png" width="400">
+                        </figure>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Proof of Concept : Synchronization</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2024</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Synchronize sensors and videos in real time with different clocks.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Python</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Sensors</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Live</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Video stream input processing</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal2">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal2" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                            <h1>Synchronize sensors and videos in real time with different clocks <a target="_blank" href="https://www.talend.com/resources/what-is-data-synchronization/">(Proof of concept)</a></h1>
+                            <p>As part of a study project. It was within my reach to develop a synchronization tool connecting a
+                                <u>BLE Bluetooth sensor (accelerometer)</u>
+                                and a video acquisition: <u>IP camera</u>. From these sources, implementing data collection interfaces, I was able to synchronize sensor and video data
+                                <i>frame by frame</i> in real time (not in post-prod). The use case was the monitoring of elevator door openings, the machine learning of boxing blows and the movement of a horse's tail during foaling. </p>
+                            <br>
+                            <h2>Java CLI program capable of saving instant data in paquets in a cloud solution</h2>
+                            
+
+                            <iframe src="https://drive.google.com/file/d/1ujw7Q7QaEw0nxMZia4lRA0sAbKBO44kd/preview" allow="autoplay, fullscreen" allowfullscreen></iframe>
+                            <br>
+                            <h2>Post-production preview of a sync stream</h2>
+                            <iframe src="https://drive.google.com/file/d/1DecThqvIbjcti3dwcgpY8GyW_gLw1csW/preview" allow="autoplay, fullscreen" allowfullscreen></iframe>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">AI for Connect Four game</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2023</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>This project aims to implement and attempt to solve a Secret variant of Connect 4.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Java</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Minimax</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Negamax</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Monte-Carlo</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal3">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal3" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>AI for solving a power 4 in which the current player does not see the opponent's moves</h1>
+                        <div class="buttons"><a href="https://github.com/robin-mat/IA_Connect_Four#banner" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                        <p>This project aims to implement and attempt to solve a Secret variant of Connect 4.</p><br><i><center>Each player sees his own tokens, but not his opponents, until one of his tokens is stacked on top.</center></i><br>
+                        <figure><img alt="" style="max-width: 500px" class="screenshot" src="https://raw.githubusercontent.com/robin-mat/IA_Connect_Four/main/src/resources/drawing.gif" width="100%"></figure><br>
+                        <br><h2>Algorithms</h2>
+                        <ul><li>Algo human brain (naive)</li><li><a href="https://en.wikipedia.org/wiki/Minimax">MinMax</a> with pruning</li><li>MinMax variation : <a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a></li><li><a href="https://www.gnu.org/software/gsl/doc/html/montecarlo.html">One montecarlo algorithm</a></li></ul>
+                        <h2>Report summary</h2><br>
+                        <figure><img style="max-width: 1000px" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/dc8ea3cbc9cb4964b41219849877ac44hsAxiZjmzpVdF7Sx-3.jpg" width="100%"></figure><br>
+                        <br><figure><img style="max-width: 1000px" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/dc8ea3cbc9cb4964b41219849877ac44hsAxiZjmzpVdF7Sx-4.jpg" width="100%"></figure><br>
+                        <h2>Running with</h2>
+                        <p>Apache ANT &amp; java from scratch.</p>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">AI for a Cluedo Version</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2023</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Bot resolving variant of a cluedo, based on literal intelligence.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Logical formalization</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Formalism</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Strategy</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal4">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal4" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Bot resolving variant of a cluedo, based on literal intelligence</h1>
+                        <p>The goal of this project is to create an AI using a logical formalization to play a variation (without board) of Cluedo. By having knowledge of known cards, unknown cards, expected cards, it is possible to have a perfect formalist beating any strategy</p>
+                        <br><h2>Formal problem solving AI :</h2>
+                        <p>By transforming any problem into a system based on literal clauses (<a href="https://iep.utm.edu/propositional-logic-sentential-logic/">see propositional logic</a>). It is possible to apply reasoning, find a solution, or even improve a situation. This can be deduced from logical rules and formal relationships between the elements of the problem.</p><p>
+                        <br></p><h2>Screenshots :</h2>
+                        <i>GUI init :</i>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/irmabot_start.png" width="400"></figure><br>
+                        <i>Sigkill to the PID of the prog to get bot data in the standard output :</i>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/irmabot_call_9_pid.png" width="400"></figure><br>
+                        <i>Result : (1000 games -&gt; simpleVersion vs randomBot)</i>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/irmabot_end.png" width="400"></figure>
+                        <br><h2>Report</h2>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/Rapport_Irmabot-1.png" width="400"></figure><br>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/Rapport_Irmabot-2.png" width="400"></figure><br>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/Rapport_Irmabot-3.png" width="400"></figure><br>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/Rapport_Irmabot-4.png" width="400"></figure><br>
+                        <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/Rapport_Irmabot-5.png" width="400"></figure><br>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Twitter Alarm Web App</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2022</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Alert Website for twitter hashtags and words.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">React</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">ExpressJS</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">mongoDB</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">EmailJS</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">TailwindCSS</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal5">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal5" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Twitter Alarm</h1>
+                        <div class="buttons"><a href="https://github.com/Finn-Vee-Axel-Mat/twitter-alarm" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                        <p>This topic deals with the development of an alert Website for twitter. In particular, it is requested that a user can register one (or more) words/tokens, which he wants to monitor. In case a certain threshold is being exceeded, an alert for the corresponding user should be generated. In addition, a visualization of should be presented on the Website.</p>
+                        <br>
+                        <h2>Made with</h2>
+                        <p>React, ExpressJS &amp; mongoDB, EmailJS, TailwindCSS</p>
+                        <h2>Screenshots :</h2>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/Finn-Vee-Axel-Mat/twitter-alarm-assets/master/screen_home.png" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/Finn-Vee-Axel-Mat/twitter-alarm-assets/master/screen_following.png" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://user-images.githubusercontent.com/74190308/159364119-9b109973-6ffa-4d54-9bec-6fda2eea38f3.png" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/Finn-Vee-Axel-Mat/twitter-alarm-assets/master/screen_settings.png" width="400"></figure>
+                      </div>
+        
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Improvement and development of a PHP web application</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2022</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>PHP application serving as a web gateway to maintenance data from a heavy proprietary software database.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Front</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">SQL</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">MSSQL</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal10">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal10" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Improvement and development of a PHP web application for maintenance management <span style="color: #0009;">(Intership 2 months)</span></h1>
+                        <p>Development of a php application serving as a web gateway to maintenance data from a heavy proprietary software database only available from fixed computers.</p>
+                        <h2>Work carried out :</h2>
+                        <h3>I'm a french junior Dev with a Master's degree in Computer Science and AI. I would like to specialize myself in <b>ambitious</b> and <b>new projects</b>.</h3>
+                        <ul>
+                            <li>Migration to PHP 8.1.4</li>
+                            <li>Application optimisation : SQL requests, algorithms, switch to a MVC pattern</li>
+                            <li>Management tools for technician clocking in and out</li>
+                            <li>Module for the daily organisation meeting</li>
+                            <li>The technicians' schedule and timetable</li>
+                            <li>Reorganisation of orders, exceptional maintenance and investments</li>
+                            <li>Stock &amp; Contracts statistics</li>
+                            <li>graphic redesign</li>
+                        </ul>
+                        <h2>Screens :</h2>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_1.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_2.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_3.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_4.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_5.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_6.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_7.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_8.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_9.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_10.jpg" width="400"></figure>
+                        <br>
+                        <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/internship_php_11.jpg" width="400"></figure>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">MultiAgents factory simulation</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2023</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Multiagents system for decentralized planification in a robotic production workshop..</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Decentralized planification</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Java</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Jade</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal7">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal7" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        
+                <h1>Multiagents factory simulation with <a target="_blank" href="https://jade.tilab.com/">Jade</a></h1>
+                <p>Multiagents system for decentralized planification in a robotic production workshop. This makes it possible to represent skills relating to agents, a constant arrival of products in a factory and communication between agents to exchange information and goods. By creating an optimized system, we ensure that each robot performs the tasks it is best at. All using the agent-oriented library: JADE, and with a Java object architecture.</p><br>
+                <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/SMA___Jade_rapport-1.png" width="400"></figure><br>
+                <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/SMA___Jade_rapport-2.png" width="400"></figure><br>
+                <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/SMA___Jade_rapport-3.png" width="400"></figure><br>
+                <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/SMA___Jade_rapport-4.png" width="400"></figure><br>
+                <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/SMA___Jade_rapport-5.png" width="400"></figure><br>
+                <br><h2>Logs for one try:</h2>
+                <pre>mat@mat-laptop ~/Desktop/code $ sh launch.sh 
+Nov 16, 2023 4:38:57 PM jade.core.Runtime beginContainer
+INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+----------------------------------------
+Nov 16, 2023 4:38:57 PM jade.imtp.leap.LEAPIMTPManager initialize
+INFO: Listening for intra-platform commands on address:
+- jicp://10.229.32.29:1099
+
+Nov 16, 2023 4:38:58 PM jade.core.BaseService init
+INFO: Service jade.core.management.AgentManagement initialized
+Nov 16, 2023 4:38:58 PM jade.core.BaseService init
+INFO: Service jade.core.messaging.Messaging initialized
+Nov 16, 2023 4:38:58 PM jade.core.BaseService init
+INFO: Service jade.core.resource.ResourceManagement initialized
+Nov 16, 2023 4:38:58 PM jade.core.BaseService init
+INFO: Service jade.core.mobility.AgentMobility initialized
+Nov 16, 2023 4:38:58 PM jade.core.BaseService init
+INFO: Service jade.core.event.Notification initialized
+Nov 16, 2023 4:38:58 PM jade.mtp.http.HTTPServer <init>
+INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Nov 16, 2023 4:38:58 PM jade.core.messaging.MessagingService boot
+INFO: MTP addresses:
+http://mat-laptop:7778/acc
+Nov 16, 2023 4:38:58 PM jade.core.AgentContainerImpl joinPlatform
+INFO: --------------------------------------
+Agent container Main-Container@10.229.32.29 is ready.
+--------------------------------------------
+Mise en place de l'atelier : monAtelier@10.229.32.29:1099/JADE [T=1000 ms, lambda=5]
+Mise en place du robot : robot1@10.229.32.29:1099/JADE [T=1000 ms, 3 competences dispo]
+Mise en place du robot : robot2@10.229.32.29:1099/JADE [T=1000 ms, 3 competences dispo]
+Mise en place du robot : robot3@10.229.32.29:1099/JADE [T=1000 ms, 3 competences dispo]
+[Atelier] INTERRO robot1 (demande ses compétences)
+[Atelier] INTERRO robot2 (demande ses compétences)
+[Atelier] INTERRO robot3 (demande ses compétences)
+Warning: No mapping found for expired timer 1700149139650
+[monAtelier] SKILLS recu FROM robot2] 
+vernir=0.615, colorier=0.816, couper=0.968
+
+------------ Recap -------------
+[monAtelier] 0/5 objets traités.
+---------------------------------
+
+[monAtelier] SKILLS recu FROM robot3] 
+vernir=0.65, colorier=0.154, couper=0.643
+[monAtelier] SEND produit n°FABRICAT : [ colorier=false ] | TO:[robot2] 
+[monAtelier] SKILLS recu FROM robot1] 
+vernir=0.368, colorier=0.27, couper=0.156
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.219&lt;0.816)
+[robot2] colorier DONE on n°FABRICAT : [ colorier=false ] (0.219&lt;0.816)
+[robot2] SEND n°TERMINE : [ colorier=true ] (TERMINE : [ colorier=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ colorier=true ] | FROM:[robot2] 
+
+------------ Recap -------------
+[monAtelier] 1/11 objets traités.
+---------------------------------
+
+[Atelier] INTERRO robot2 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ colorier=false ] | TO:[robot1] 
+[monAtelier] SKILLS recu FROM robot2] 
+vernir=0.615, colorier=0.816, couper=0.968
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.995&lt;0.27)
+
+------------ Recap -------------
+[monAtelier] 1/18 objets traités.
+---------------------------------
+
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.334&lt;0.27)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.517&lt;0.27)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.447&lt;0.27)
+
+------------ Recap -------------
+[monAtelier] 1/24 objets traités.
+---------------------------------
+
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.304&lt;0.27)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.191&lt;0.27)
+[robot1] colorier DONE on n°FABRICAT : [ colorier=false ] (0.191&lt;0.27)
+[robot1] SEND n°TERMINE : [ colorier=true ] (TERMINE : [ colorier=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ colorier=true ] | FROM:[robot1] 
+[Atelier] INTERRO robot1 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ vernir=false ] | TO:[robot3] 
+
+------------ Recap -------------
+[monAtelier] 2/32 objets traités.
+---------------------------------
+
+[monAtelier] SKILLS recu FROM robot1] 
+vernir=0.368, colorier=0.27, couper=0.156
+ A ESSAYER de faire son action sur n°FABRICAT : [ vernir=false ] (0.567&lt;0.65)
+[robot3] vernir DONE on n°FABRICAT : [ vernir=false ] (0.567&lt;0.65)
+[robot3] SEND n°TERMINE : [ vernir=true ] (TERMINE : [ vernir=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ vernir=true ] | FROM:[robot3] 
+[Atelier] INTERRO robot3 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ vernir=false colorier=false ] | TO:[robot2] 
+
+------------ Recap -------------
+[monAtelier] 3/36 objets traités.
+---------------------------------
+
+[monAtelier] SKILLS recu FROM robot3] 
+vernir=0.65, colorier=0.154, couper=0.643
+ A ESSAYER de faire son action sur n°FABRICAT : [ vernir=false colorier=false ] (0.469&lt;0.816)
+[robot2] colorier DONE on n°FABRICAT : [ vernir=false colorier=false ] (0.469&lt;0.816)
+{vernir=( agent-identifier :name robot2@10.229.32.29:1099/JADE  :addresses (sequence http://mat-laptop:7778/acc ))}
+ A ESSAYER de faire son action sur n°FABRICAT : [ vernir=false colorier=true ] (0.988&lt;0.615)
+
+------------ Recap -------------
+[monAtelier] 3/43 objets traités.
+---------------------------------
+
+ A ESSAYER de faire son action sur n°FABRICAT : [ vernir=false colorier=true ] (0.29&lt;0.615)
+[robot2] vernir DONE on n°FABRICAT : [ vernir=false colorier=true ] (0.29&lt;0.615)
+[robot2] SEND n°TERMINE : [ vernir=true colorier=true ] (TERMINE : [ vernir=true colorier=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ vernir=true colorier=true ] | FROM:[robot2] 
+[Atelier] INTERRO robot2 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ colorier=false couper=false ] | TO:[robot3] 
+[monAtelier] SKILLS recu FROM robot2] 
+vernir=0.615, colorier=0.816, couper=0.968
+
+------------ Recap -------------
+[monAtelier] 4/51 objets traités.
+---------------------------------
+
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false couper=false ] (0.848&lt;0.643)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false couper=false ] (0.948&lt;0.643)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false couper=false ] (0.524&lt;0.643)
+[robot3] couper DONE on n°FABRICAT : [ colorier=false couper=false ] (0.524&lt;0.643)
+{colorier=( agent-identifier :name robot1@10.229.32.29:1099/JADE  :addresses (sequence http://mat-laptop:7778/acc ))}
+[robot3] SEND n°FABRICAT : [ colorier=false couper=true ] (FABRICAT : [ colorier=false couper=true ]) | TO :robot1@10.229.32.29:1099/JADE
+
+------------ Recap -------------
+[monAtelier] 4/57 objets traités.
+---------------------------------
+
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false couper=true ] (0.61&lt;0.27)
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false couper=true ] (0.126&lt;0.27)
+[robot1] colorier DONE on n°FABRICAT : [ colorier=false couper=true ] (0.126&lt;0.27)
+[robot1] SEND n°TERMINE : [ colorier=true couper=true ] (TERMINE : [ colorier=true couper=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ colorier=true couper=true ] | FROM:[robot1] 
+
+------------ Recap -------------
+[monAtelier] 5/63 objets traités.
+---------------------------------
+
+[Atelier] INTERRO robot1 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ colorier=false ] | TO:[robot2] 
+[monAtelier] SKILLS recu FROM robot1] 
+vernir=0.368, colorier=0.27, couper=0.156
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.21&lt;0.816)
+[robot2] colorier DONE on n°FABRICAT : [ colorier=false ] (0.21&lt;0.816)
+[robot2] SEND n°TERMINE : [ colorier=true ] (TERMINE : [ colorier=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ colorier=true ] | FROM:[robot2] 
+
+------------ Recap -------------
+[monAtelier] 6/68 objets traités.
+---------------------------------
+
+[Atelier] INTERRO robot2 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ colorier=false ] | TO:[robot1] 
+[monAtelier] SKILLS recu FROM robot2] 
+vernir=0.615, colorier=0.816, couper=0.968
+ A ESSAYER de faire son action sur n°FABRICAT : [ colorier=false ] (0.07&lt;0.27)
+[robot1] colorier DONE on n°FABRICAT : [ colorier=false ] (0.07&lt;0.27)
+[robot1] SEND n°TERMINE : [ colorier=true ] (TERMINE : [ colorier=true ]) | TO :monAtelier@10.229.32.29:1099/JADE
+[monAtelier] RECEIVE produit n°TERMINE : [ colorier=true ] | FROM:[robot1] 
+
+------------ Recap -------------
+[monAtelier] 7/73 objets traités.
+---------------------------------
+
+[Atelier] INTERRO robot1 (demande ses compétences)
+[monAtelier] SEND produit n°FABRICAT : [ vernir=false colorier=false couper=false ] | TO:[robot2] 
+^CArrêt de l'atelier : monAtelier@10.229.32.29:1099/JADE
+Arrêt du robot : robot1@10.229.32.29:1099/JADE
+Arrêt du robot : robot2@10.229.32.29:1099/JADE
+Arrêt du robot : robot3@10.229.32.29:1099/JADE</init></pre>
+                
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Android Application</h1>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <div class="text-center align-middle badge badge-outline h-max inline-block shadow-md w-max font-mono">2022</div>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>An application for discovering a tourist place.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Java</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">SQL</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">API</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal1">
+                        Find out more
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h1>Available for all android devices. Developed voluntarily to learn.</h1>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 1em; padding: 10px;">
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/1.jpg" style="width: 100%; height: auto;"></figure>
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/2.jpg" style="width: 100%; height: auto;"></figure>
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/3.jpg" style="width: 100%; height: auto;"></figure>
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/4.jpg" style="width: 100%; height: auto;"></figure>
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/5.jpg" style="width: 100%; height: auto;"></figure>
+                              <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/haguide/6.jpg" style="width: 100%; height: auto;"></figure>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">Others projects</h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Others projects in bulk.</p>
+                      </article>
+                      <div class="flex content-around flex-wrap gap-2 my-4">
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Scripts</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Networks</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Tools</span>
+                        <span class="text-sm text-center align-middle badge badge-outline h-max inline-block mb-1 shadow-md w-max">Cyber</span>
+                      </div>
+                    </div>
+                    <div class="justify-self-end self-center">
+                      <a href="#" id="openModal" data-modal="modal11">
+                        Take a look
+                        <svg style="display: inline; margin-left:0.2em" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="solaris-icon si-accessibility-vision" viewBox="0 0 1000 1000">
+                          <path d="M513.081 250.129c-4.017 0-8.041-.129-12.081-.129s-8.064.129-12.081.129C301.335 250.129 111.491 382.343 50 500c61.491 117.656 249.335 249.871 436.919 249.871 4.017 0 8.04.129 12.081.129s8.064-.129 12.081-.129C698.665 749.871 888.51 617.656 950 500c-61.49-117.657-249.335-249.871-436.919-249.871M498.62 680a180 180 0 1 1 180-180 180 180 0 0 1-180 180m-378.2-179.963c29.782-41.595 77.4-84.081 132.916-117.816a545 545 0 0 1 55.918-29.695 239.85 239.85 0 0 0 .78 295.942 537 537 0 0 1-57.553-30.6c-55.012-33.642-102.328-76.134-132.064-117.834Zm626.25 117.747a544 544 0 0 1-60.236 31.655 239.784 239.784 0 0 0-.761-299.823 536 536 0 0 1 61.852 32.517c55.01 33.642 102.326 76.136 132.061 117.836-29.786 41.595-77.401 84.076-132.919 117.812ZM597.931 453.153a48.227 48.227 0 1 1-62.472-56.6 109.731 109.731 0 1 0 62.472 56.6" style="fill-rule:evenodd"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div id="modal11" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle1">
+                          <label for="drawer-toggle1" class="drawer-button">Blockchain masterclass about The Ethereum Virtual Machine</label>
+                          
+                          <div class="drawer">
+                            <p><i>EVM</i> (stands for <b>E</b>thereum <b>V</b>irtual <b>M</b>achine) <i>is a decentralised virtual environment that executes code consistently and securely on all nodes on the blockchain architectures mainly used to date.</i></p>
+                            <div style="border: #000000a3 solid 3px">
+                            <h2><u>Proof of Stake consensus algorith</u> <span style="color:#0009">(≃ 30")</span></h2>
+                            <ol>
+                                <li>Blockchains : a peer to peer networks </li>
+                                <li>About consensus</li>
+                                <ol>
+                                    <li>CAP theorem</li>
+                                </ol>
+                                <li>Proof of Stake</li>
+                                <li>Ethereum PoS adaptation</li>
+                                <ol>
+                                    <li>Epochs</li>
+                                    <li>Liveness</li>
+                                    <li>Randomness with RANDAO</li>
+                                    <li>A cryptographic signature scheme : BLS </li>
+                                </ol>
+                                <li>Ethereum building blocks</li>
+                                <ol>
+                                    <li>Repartition in committees</li>
+                                    <li>Aggregators</li>
+                                    <li>Repartition in committees</li>
+                                    <li>Functionning</li>
+                                    <li>Global participation of the entire network</li>
+                                    <li>Sync committee</li>
+                                </ol>
+                            </ol>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/presentation_pos.png" width="400"></figure><br>
+                            </div>
+                            <br>
+                            <div style="border: #000000a3 solid 3px">
+                            <h2><u>Storage : How ethereum deals with data on the blockchain</u> <span style="color:#0009">(≃ 50")</span></h2>
+                            <ol>
+                                <li>From registry to distributed state machine</li>
+                                <li>Instructions in the EVM</li>
+                                <ol>
+                                    <li>Gas usage</li>
+                                    <li>Stack-based architecture</li>
+                                </ol>
+                                <li>Machine space of EVM</li>
+                                <ol>
+                                    <li>Stack</li>
+                                    <li>Memory</li>
+                                    <li>Account storage</li>
+                                </ol>
+                                <li>Solidity and EVM code</li>
+                                <li>Kind of accounts</li>
+                                <ol>
+                                    <li>EOA : Externally Owned Account</li>
+                                    <li>Contract account</li>
+                                    <li>Account storage</li>
+                                </ol>
+                                <li>World state of the EVM</li>
+                                <ol>
+                                    <li>working on 256 bits (32 bytes)</li>
+                                </ol>
+                                <li>Optimisation and formats</li>
+                                <ol>
+                                    <li>Simple : int, uint...</li>
+                                    <li>String, Storage order</li>
+                                    <li>Structures, Arrays, Mapping, Constant &amp; immutable</li>
+                                </ol>
+                                <li>Workshop with remix.ethereum <span style="color:#0009">(≃ 20")</span></li>
+                            </ol>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/presentation_evm_storage.png" width="400"></figure><br>
+                            </div>
+                            <br>
+                            <div style="border: #000000a3 solid 3px">
+                            <h2><u>Solidity : Improving the efficiency of gas use</u> <span style="color:#0009">(≃ 45")</span></h2>
+                            <ol>
+                                <li>Solidity, a quick reminder</li>
+                                <li>Why optimize ?</li>
+                                <li>Solidity compiler has natives optimizations</li>
+                                <li>Benefits with a technical example</li>
+                                <li>Optimizations are relatives</li>
+                                <li>Best practises</li>
+                                <li>Yul, an intermediate language</li>
+                            </ol>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/presentation_solidity_optimizations.png" width="400"></figure><br>
+                            </div>
+                            
+      
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle2">
+                          <label for="drawer-toggle2" class="drawer-button">Port scan attacks with NMAP, +Demo. (30" conference)</label>
+                          <div class="drawer">
+                            <div class="buttons"><a href="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/PortScan_demo.pdf" class="app-link app-source-link" target="_blank">Demo PDF Download</a> </div>
+                            <br><h2>Report of the presentation</h2>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-01.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-02.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-03.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-04.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-05.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-06.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-07.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-08.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-09.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-10.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-11.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-12.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-13.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-14.png" width="400"></figure><br>
+                            <figure><img style="width:100%" alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/21905151_NMAP_presentation-15.png" width="400"></figure>
+                            <br><h2>Demo</h2>
+                            <p>the demonstration took place in person but here are some of the commands used on a virtual machine with applications containing breaches like apache/nginx/ftp serveur and a opened socket.</p>
+                            
+      
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle3">
+                          <label for="drawer-toggle3" class="drawer-button">Automate bot : Obtain a regular assessment of your staking positions on decentralized networks</label>
+                          <div class="drawer">
+                            <p>Decentralized PoS (<a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">proof of stake</a>) networks remunerate positions within validators. My automate bot makes it more convenient to access your positions and income directly from your mobile without having to connect to various pages from wallets.</p><br>
+                            <div style="margin-bottom: 25px;display: grid;grid-template-columns: repeat(2, 1fr);margin-left: -50px; grid-gap: 1em"><figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/lido.jpg" width="250"></figure>
+                            <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/xidar.jpg" width="250'"></figure></div>
+                            <figure><img alt="" class="screenshot" src="https://github.com/0xmathisd/0xmathisd.github.io/blob/main/assets/images/xidar.jpg" width="400"></figure><br>
+                            <br><h2>Steps</h2>
+                            <ol><li>Fetch various data from different API</li><li>Parse json and compute metrics</li><li>Display the data</li><li>Callable occasionally or activated every 24 hours with android widgets</li></ol>
+                            <h2 style="color: red;">Working with Android, thanks to <a style="color: blue" href="https://llamalab.com/automate/">Automate</a></h2><br>
+                            <h2>Get my app</h2>
+                            <p>I keep it private for keep private info but i can provide you the template if you contact me :)</p>
+                            <div class="buttons"><a class="app-link app-source-link" target="_blank">Mail near 'Home' link</a> </div>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle4">
+                          <label for="drawer-toggle4" class="drawer-button">PaintLite Java</label>
+                          <div class="drawer">
+                            <p>This topic deal with a Java GUI program using a lot of conceptions patterns.</p>
+                            <p>This Java graphical interface allows editing of a JPanel using software architecture concepts such as MVC, design patterns, and advanced data structures. The project was completed as part of learning advanced design patterns and data structures.</p>
+                            <figure style="margin-bottom: 1em"><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/paint2_0.png" width="100%"></figure>
+                            <figure style="margin-bottom: 1em"><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/paint2_2.png" width="100%"></figure>
+                            <figure style="margin-bottom: 1em"><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/paint2_3.png" width="100%"></figure>
+                            <figure style="margin-bottom: 1em"><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/0xmathisd.github.io/main/assets/images/paint2_4.png" width="250px"></figure>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle6">
+                          <label for="drawer-toggle6" class="drawer-button">Ethereum Sweeper Script</label>
+                          <div class="drawer">
+                            <p>A nodejs script to steal ethers deposit from a hacker who tries to perform any transaction on an account that does not belong to him.</p><hr><p></p>
+                            <p>Useful to help someone who has disclosed their private key. The malicious person must deposit ether to interact with smart contracts or make transfers. Thus from his deposit the ethers are transferred and he cannot carry out his theft of the account.</p>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle7">
+                          <label for="drawer-toggle7" class="drawer-button">KeyHolder-Shell</label>
+                          <div class="drawer">
+                            <div class="buttons"><a href="https://github.com/0xmathid/KeyHolder-Shell" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                            <p>Tool written in C grouping together the major uses of the Unix shell in different chapters.</p>
+                            <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/KeyHolder-Shell/main/content/slide.png" width="400"></figure>
+                            <br><figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/KeyHolder-Shell/main/content/chapters.png" width="400"></figure>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle8">
+                          <label for="drawer-toggle8" class="drawer-button">GPIO-hub-controller</label>
+                          <div class="drawer">
+                            <div class="buttons"><a href="https://github.com/0xmathisd/GPIO-hub-controller" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                            <p>A script who managing the GPIO output port of any raspberry pi using Pi.GPIO, different uses are possible: leds, fans, etc.</p>
+                            <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/GPIO-hub-controller/master/img/help.PNG" width="400"></figure>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle9">
+                          <label for="drawer-toggle9" class="drawer-button">Python spyware</label>
+                          <div class="drawer">
+                            <div class="buttons"><a href="https://github.com/0xmathisd/python-spyware" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                            <p>A suite of python tools dedicated to spying a machine running on GNU / linux with Opencv2/Pyxhook.</p>
+                            <ul><b>Available tools</b> <li>the keylogger : capture all keyboard inputs</li><li>the spycam : capture picture from the camera with a regular time interval</li> </ul>
+                          </div>
+                        </div>
+                        <div class="drawer-container">
+                          <input type="checkbox" id="drawer-toggle10">
+                          <label for="drawer-toggle10" class="drawer-button">Browser extension : Inputs thief firefox</label>
+                          <div class="drawer">
+                            <div class="buttons"><a href="https://github.com/0xmathid/inputs-thief-firefox" class="app-link app-source-link" target="_blank">GitHub</a> </div>
+                            <p>Inputs thief firefox is an extension working on a firefox web browser, she takes care of retrieving all inputs with type='text', site, time and date. Once harvested, everything is sent to an online database without the user's knowledge.</p>
+                            <figure><img alt="" class="screenshot" src="https://raw.githubusercontent.com/0xmathisd/inputs-thief-firefox/master/screens/popup_censored.jpg" width="300"></figure>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+        </div>
+          <div class="collapse collapse-arrow">
+            <input type="checkbox" aria-label="Skills">
+            <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
+              <div class="flex">
+                <svg class="h-8 w-8 mr-4" data-icon="mdi:book-open-variant-outline" height="1em" viewBox="0 0 24 24" width="1em">
+                  <symbol id="ai:mdi:book-open-variant-outline">
+                    <path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5c-1.65 0-3.35.3-4.75 1.05c-.1.05-.15.05-.25.05c-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1c1.11-.35 2.33-.5 3.5-.5c1.95 0 4.05.4 5.5 1.5c1.45-1.1 3.55-1.5 5.5-1.5c1.17 0 2.39.15 3.5.5c.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5c-.1 0-.15 0-.25-.05c-1.4-.75-3.1-1.05-4.75-1.05c-1.7 0-4.15.65-5.5 1.5m-1-14c-1.36-.6-3.16-1-4.5-1c-1.2 0-2.4.15-3.5.5v11.5c1.1-.35 2.3-.5 3.5-.5c1.34 0 3.14.4 4.5 1zM13 19c1.36-.6 3.16-1 4.5-1c1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5c-1.34 0-3.14.4-4.5 1zm1-2.65c.96-.35 2.12-.52 3.5-.52c1.04 0 1.88.08 2.5.24v-1.5a13.9 13.9 0 0 0-6 .19zm0-2.66c.96-.35 2.12-.53 3.5-.53c1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23c-1.28 0-2.45.15-3.5.45zM14 11c.96-.33 2.12-.5 3.5-.5c.91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23c-1.32 0-2.5.15-3.5.46z" fill="currentColor"></path>
+                  </symbol>
+                  <use xlink:href="#ai:mdi:book-open-variant-outline"></use>
+                </svg> Skills
+              </div>
+            </div>
+            <div class="collapse-content">
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-artificial-intelligence" viewBox="0 0 1000 1000">
+                          <path d="M820.465 549.318 750 449.675V380h-.193C744.535 227.232 619.053 105 465 105c-157.4 0-285 127.6-285 285a283.67 283.67 0 0 0 51.861 163.944A219.1 219.1 0 0 1 250 641.509c0 2.5-.057 4.991-.14 7.472h.14V850a50 50 0 0 0 50 50h275V775h125a50 50 0 0 0 50-50V590h51a25 25 0 0 0 19.465-40.682M680.934 340.659a87.224 87.224 0 0 1-121.4 80.207 87.24 87.24 0 0 0-95.811 33.877l-.04-.025A120.769 120.769 0 0 1 239.948 403.2a229 229 0 0 1-2.138-32.215 146 146 0 0 1 2.933-29.175c16.991-88.38 86.714-159.238 174.714-175.8a221.8 221.8 0 0 1 51.4-6.008c90.354 0 168.158 54.187 203.221 132.1q2.332 4.854 4.2 9.963A110.6 110.6 0 0 1 680.89 338q.014.554.024 1.111c0 .3.02.592.02.891v.289c-.004.122 0 .244 0 .368m-218.889-11.238c-14.279-34.456-20.922 2.241-40.784-17.62s16.845-26.5-17.613-40.775-13.211 16.374-41.293 16.374-6.837-30.647-41.294-16.375 2.239 20.914-17.621 40.775-26.5-16.836-40.776 17.62 16.375 13.2 16.375 41.294-30.654 6.836-16.375 41.292 20.914-2.24 40.776 17.613-16.84 26.513 17.621 40.781 13.2-16.376 41.294-16.376 6.828 30.646 41.293 16.376-2.249-20.922 17.613-40.784 26.5 16.844 40.784-17.613-16.383-13.2-16.383-41.292 30.654-6.833 16.383-41.29m-99.7 95.5a54.205 54.205 0 1 1 54.2-54.2 54.2 54.2 0 0 1-54.201 54.196Zm153.766-136.845c19.229-19.19 30.849 8.015 37.3-16.06s-17.216-6.33-24.272-32.551 22.35-22.624 4.663-40.266-14.077 11.7-40.366 4.656-8.5-30.642-32.639-24.209 3.138 18.026-16.1 37.2-30.844-8.02-37.3 16.06 17.2 6.319 24.268 32.55-22.343 22.628-4.665 40.259 14.084-11.695 40.376-4.653 8.494 30.65 32.63 24.206-3.128-18.017 16.105-37.192m-14.318-29.259a22.713 22.713 0 1 1-16.062-27.808 22.715 22.715 0 0 1 16.062 27.808m99.139 34.305c-20.259-12.826.9-28-21.088-28.928s-2.1 15.982-23.306 27.057-23.831-14.844-35.583 3.71 12.809 9.832 11.86 33.744-24.734 13.155-14.5 32.625 14.915-6.136 35.174 6.689-.906 28 21.081 28.924 2.1-15.973 23.307-27.047 23.835 14.841 35.584-3.708-12.814-9.844-11.861-33.746 24.734-13.155 14.5-32.635-14.91 6.14-35.168-6.685m-7.408 48.411a20.008 20.008 0 1 1-6.2-27.6 20.01 20.01 0 0 1 6.2 27.6" style="fill-rule:evenodd"/>
+                        </svg>AI and Machine learning
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>LLMOps, SVM Classification, regression, clustering, Multi-agent Systems, Transformers for NLP, Scikit-learn, Integration of Generative AI APIs.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-link" viewBox="0 0 1000 1000">
+                          <path d="M587.422 132.923 412.634 307.711A248.1 248.1 0 0 1 537.9 322.28l119.442-119.438a98.881 98.881 0 0 1 139.839 139.839l-174.8 174.8a98.88 98.88 0 0 1-139.838 0 49.441 49.441 0 1 0-69.92 69.919c77.231 77.231 202.447 77.231 279.678 0L867.1 412.6c77.231-77.231 77.231-202.447 0-279.678s-202.447-77.23-279.678.001m-174.8 734.154 174.791-174.789a248.06 248.06 0 0 1-125.27-14.569L342.7 797.158a98.881 98.881 0 0 1-139.835-139.839l174.8-174.8a98.883 98.883 0 0 1 139.839 0 49.44 49.44 0 1 0 69.918-69.919c-77.23-77.23-202.446-77.23-279.677 0l-174.8 174.8c-77.231 77.231-77.231 202.447 0 279.678 77.232 77.23 202.448 77.23 279.679-.001Z" style="fill-rule:evenodd"/>
+                        </svg>Blockchain
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Smart contracts and Solidity : Foundry, integration. Web3 Development, EthersJS, Web3.py</p>
+                        <p>EVM knowledges : consensus, mecanisms, Go-eth, gaz optimization, Decentralised networks.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-resolution" viewBox="0 0 1000 1000">
+                          <circle cx="687.5" cy="687.5" r="37.5"/>
+                          <circle cx="462.5" cy="462.5" r="37.5"/>
+                          <path d="M825 125H175c-27.6 0-50 22.4-50 50v650c0 27.6 22.4 50 50 50h650c27.6 0 50-22.4 50-50V175c0-27.6-22.4-50-50-50m0 700H625V625h200zm0-250H600c-13.8 0-25 11.2-25 25v225H400V400h425zm0-225H375c-13.8 0-25 11.2-25 25v450H175V175h650z"/>
+                          <circle cx="237.5" cy="237.5" r="37.5"/>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-data-centre" viewBox="0 0 1000 1000">
+                          <path d="M875 175c27.614 0 50 22.386 50 50v550c0 27.614-22.386 50-50 50H125c-27.614 0-50-22.386-50-50V225c0-27.614 22.386-50 50-50zm-550 50H150c-13.807 0-25 11.193-25 25v500c0 13.807 11.193 25 25 25h175c13.807 0 25-11.193 25-25V250c0-13.807-11.193-25-25-25m263 0H413c-13.807 0-25 11.193-25 25v500c0 13.807 11.193 25 25 25h175c13.807 0 25-11.193 25-25V250c0-13.807-11.193-25-25-25m262 0H675c-13.807 0-25 11.193-25 25v500c0 13.807 11.193 25 25 25h175c13.807 0 25-11.193 25-25V250c0-13.807-11.193-25-25-25m-150 25h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H700c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H700c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H700c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H700c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m62 125c13.807 0 25 11.193 25 25s-11.193 25-25 25-25-11.193-25-25 11.193-25 25-25M438 250h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H438c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H438c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H438c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H438c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m62 125c13.807 0 25 11.193 25 25s-11.193 25-25 25-25-11.193-25-25 11.193-25 25-25M175 250h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H175c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H175c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H175c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m0 100h125c13.807 0 25 11.193 25 25v25c0 13.807-11.193 25-25 25H175c-13.807 0-25-11.193-25-25v-25c0-13.807 11.193-25 25-25m62 125c13.807 0 25 11.193 25 25s-11.193 25-25 25-25-11.193-25-25 11.193-25 25-25"/>
+                        </svg>Web Development
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p><u>Front :</u> HTML/CSS; JS and frameworks : React, Svelte, VueJS. Responsive & UI.</p>
+                        <p><u>Back :</u> PHP, SQL, FlaskAPI, mongoDB.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-developer" viewBox="0 0 1000 1000">
+                          <path d="M657.7 422.409C730.029 461.827 775.027 537.627 775 620v305H325c-55.228 0-100-44.772-100-100V615h.063c1.77-80.56 46.493-154.021 117.247-192.583 88.572 83.447 226.822 83.443 315.39-.008M530.8 593h-.047a13.4 13.4 0 0 0-12.9 9.812L458.048 817.6a12.923 12.923 0 0 0 12.431 16.4h.047a12.91 12.91 0 0 0 12.43-9.454l60.006-215.5A12.64 12.64 0 0 0 530.8 593m-115.632 39.943c-.925 0-1.834.242-2.637.701l-105.659 60.564A13.41 13.41 0 0 0 300 705.8v15.311a13.45 13.45 0 0 0 6.893 11.636l105.75 60.619a5.19 5.19 0 0 0 6.937-1.657 4.67 4.67 0 0 0 .72-2.484V773.17a10.48 10.48 0 0 0-5.482-9.118l-85-47.369a3.624 3.624 0 0 1-1.4-5.08 3.8 3.8 0 0 1 1.4-1.338l85.622-47.72a9.29 9.29 0 0 0 4.86-8.083v-16.618a5.02 5.02 0 0 0-5.132-4.901m170.665-.01a5.02 5.02 0 0 0-5.133 4.902v16.618a9.29 9.29 0 0 0 4.86 8.083l85.622 47.72a3.8 3.8 0 0 1 1.4 1.338 3.624 3.624 0 0 1-1.4 5.08l-85 47.369a10.48 10.48 0 0 0-5.482 9.117v16.055c0 .88.251 1.741.721 2.485a5.19 5.19 0 0 0 6.936 1.666l105.75-60.619A13.45 13.45 0 0 0 701 721.114V705.8a13.41 13.41 0 0 0-6.872-11.6l-105.66-60.565a5.3 5.3 0 0 0-2.635-.701M500 75c99.411 0 180 80.589 180 180s-80.589 180-180 180-180-80.589-180-180S400.589 75 500 75"/>
+                        </svg>Multiplatforms & others
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>Java, Python, NodeJS.</p>
+                        <p>Docker, Git, linux env, bash, git CI/CD, Cloud deployments.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
+                <div class="card-body">
+                  <div class="gap-4 grid grid-cols-3 mb-2">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <h1 class="font-extrabold md:text-2xl card-title tracking-tighter uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="solaris-icon si-machine-learning" viewBox="0 0 1000 1000">
+                          <path d="M563.852 750H438.361a24.255 24.255 0 0 0-24.255 24.255v50.852A24.894 24.894 0 0 0 439 850h17.073a3.12 3.12 0 0 1 2.637 1.49 49.983 49.983 0 0 0 84.793 0 3.12 3.12 0 0 1 2.637-1.49h16.306a25.66 25.66 0 0 0 25.66-25.661v-50.084A24.254 24.254 0 0 0 563.852 750m-75.8-197.572a24.4 24.4 0 1 0 33.295 9.082 24.413 24.413 0 0 0-33.3-9.082ZM725 350c0-124.266-100.736-225-225-225S275 225.736 275 350a223.94 223.94 0 0 0 39.358 127.142c69.379 106.617 83.8 198.168 85.735 212.874A37.5 37.5 0 0 0 437.5 725h125a37.5 37.5 0 0 0 37.21-32.908h.011s10.479-101.111 89.017-219.567h-.009A223.93 223.93 0 0 0 725 350M570.137 615.164c-13.565 23.172-17.832-8.3-43.231 6.207s-.459 34.177-27.3 34.089-1.672-19.593-26.9-34.268-29.866 16.775-43.153-6.492 16.166-11.282 16.331-40.478-29.407-17.4-15.841-40.574 17.824 8.309 43.222-6.2.455-34.187 27.305-34.094 1.659 19.591 26.887 34.263 29.866-16.769 43.15 6.493-16.15 11.282-16.328 40.476 29.411 17.404 15.858 40.578m70.408-206.085c-20.382 48.744-29.617-3.276-57.849 24.768s23.734 37.619-25.153 57.683-18.618-23.263-58.41-23.4-9.829 43.383-58.58 23.009 3.283-29.627-24.76-57.857-37.634 23.733-57.691-25.145 23.264-18.636 23.406-58.418-43.4-9.828-23.016-58.573 29.626 3.268 57.85-24.768-23.726-37.625 25.152-57.684 18.635 23.265 58.427 23.4 9.821-43.39 58.565-23.008-3.276 29.618 24.768 57.849 37.634-23.734 57.683 25.152-23.256 18.628-23.39 58.418 43.381 9.829 22.998 58.574m-191.7-114.874a76.788 76.788 0 1 0 108.583 1.221 76.785 76.785 0 0 0-108.582-1.221Z" style="fill-rule:evenodd"/>
+                        </svg>Computer Vision
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="gap-4 grid grid-cols-3 place-items-center">
+                    <div class="col-span-2 justify-self-start self-start text-left">
+                      <article class="prose">
+                        <p>OpenCV, TensorFlow, Convolutional Neural Networks.</p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex items-center justify-center bg-transparent py-4">
+      <a href="mailto:mathis-durand@outlook.com" target="_blank">
+        <button class="btn btn-md btn-outline mr-2">
+          <svg class="h-6 w-6" data-icon="carbon:email" height="1em" viewBox="0 0 32 32" width="1em">
+            <symbol id="ai:carbon:email">
+              <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z" fill="currentColor"></path>
+            </symbol>
+            <use xlink:href="#ai:carbon:email"></use>
+          </svg>Email </button>
+      </a>
+      <a href="https://github.com/0xmathisd" target="_blank">
+        <button class="btn btn-md btn-outline mr-2">
+          <svg class="h-6 w-6" data-icon="carbon:logo-github" height="1em" viewBox="0 0 32 32" width="1em">
+            <symbol id="ai:carbon:logo-github">
+              <path d="M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.7 3.7 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2" fill="currentColor" fill-rule="evenodd"></path>
+            </symbol>
+            <use xlink:href="#ai:carbon:logo-github"></use>
+          </svg>Github </button>
+      </a>
+      <a href="https://www.linkedin.com/in/mathis-drd" target="_blank">
+        <button class="btn btn-md btn-outline mr-2">
+          <svg class="h-6 w-6" data-icon="carbon:logo-linkedin" height="1em" viewBox="0 0 32 32" width="1em">
+            <symbol id="ai:carbon:logo-linkedin">
+              <path d="M26.2 4H5.8C4.8 4 4 4.8 4 5.7v20.5c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V5.7c0-.9-.8-1.7-1.8-1.7M11.1 24.4H7.6V13h3.5zm-1.7-13c-1.1 0-2.1-.9-2.1-2.1s.9-2.1 2.1-2.1c1.1 0 2.1.9 2.1 2.1s-1 2.1-2.1 2.1m15.1 12.9H21v-5.6c0-1.3 0-3.1-1.9-3.1S17 17.1 17 18.5v5.7h-3.5V13h3.3v1.5h.1c.5-.9 1.7-1.9 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.2z" fill="currentColor"></path>
+            </symbol>
+            <use xlink:href="#ai:carbon:logo-linkedin"></use>
+          </svg>Linkedin </button>
+      </a>
+    </footer>
+  </body>
+  <script>
+document.querySelectorAll('#openModal').forEach(function(element) {
+  element.onclick = function() {
+    var modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'flex';
+    document.querySelectorAll('.container')[0].style.overflow = 'hidden';
+  }
+});
+
+document.querySelectorAll('.close').forEach(function(element) {
+  element.onclick = function() {
+    var modal = this.closest('.modal');
+    modal.style.display = 'none';
+    document.querySelectorAll('.container')[0].style.overflow = 'auto';
+  }
+});
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+    document.querySelectorAll('.container')[0].style.overflow = 'auto';
+  }
+}
+</script>
+</html>
