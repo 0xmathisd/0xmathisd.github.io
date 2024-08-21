@@ -239,17 +239,17 @@ pre {
           <h1 class="font-extrabold tracking-tight md:text-3xl relative text-3xl w-full" >Mathis Durand<div class="ml-2 -mt-4 absolute center-full top-0" ></div>
           </h1>
         </div>
-        <h2 class="text-lg mb-2" >French Developper | 🇫🇷 Master degree</h2>
+        <h2 class="text-lg mb-2" >French Developer | 🇫🇷 Master degree</h2>
       </div>
     </header>
 
     <div class="flex divider flex-nowrap h-fit max-w-3xl mx-auto w-[95vw]"></div>
   
-    <div class="grid flex-grow max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto overflow-y-scroll py-2 w-[95vw]">
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2 w-[95vw]">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
-            <input type="checkbox" aria-label="Career">
+            <input type="checkbox" id="careerInput" aria-label="Career">
             <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
               <div class="flex">
                 <svg class="h-8 w-8 mr-4" data-icon="mdi:certificate-outline" height="1em" viewBox="0 0 24 24" width="1em">
@@ -260,7 +260,7 @@ pre {
                 </svg> Career
               </div>
             </div>
-            <div class="collapse-content">
+            <div class="collapse-content" id="careerCollapseContent">
               <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
                 <div class="card-body">
                   <div class="gap-4 grid grid-cols-3 mb-2">
@@ -444,17 +444,11 @@ pre {
       </div>
     </div>
 
-
-
-
-
-    
-
-    <div class="grid flex-grow max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto overflow-y-scroll py-2 w-[95vw]">
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2 w-[95vw]">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
-            <input type="checkbox" aria-label="Skills">
+            <input type="checkbox" id="projectsInput" aria-label="Skills">
             <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
               <div class="flex">
                 <svg class="h-8 w-8 mr-4" data-icon="mdi:book-edit-outline" height="1em" viewBox="0 0 24 24" width="1em">
@@ -465,7 +459,7 @@ pre {
                 </svg> Projects
               </div>
             </div>
-            <div class="collapse-content">
+            <div class="collapse-content"  id="projectsCollapseContent">
               
               <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
                 <div class="card-body">
@@ -1156,11 +1150,12 @@ Arrêt du robot : robot3@10.229.32.29:1099/JADE</init></pre>
         </div>
       </div>
     </div>
-    <div class="grid flex-grow max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto overflow-y-scroll py-2 w-[95vw]">
+
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2 w-[95vw]">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
-            <input type="checkbox" aria-label="Skills">
+            <input type="checkbox" id="skillsInput" aria-label="Skills">
             <div class="font-extrabold md:text-2xl collapse-title tracking-tight">
               <div class="flex">
                 <svg class="h-8 w-8 mr-4" data-icon="mdi:book-open-variant-outline" height="1em" viewBox="0 0 24 24" width="1em">
@@ -1171,7 +1166,7 @@ Arrêt du robot : robot3@10.229.32.29:1099/JADE</init></pre>
                 </svg> Skills
               </div>
             </div>
-            <div class="collapse-content">
+            <div class="collapse-content" id="skillsCollapseContent">
               <div class="my-4 border border-[oklch(var(--s))] card card-bordered card-compact hover:shadow-lg lg:w-128 md:w-112 transition-all w-full">
                 <div class="card-body">
                   <div class="gap-4 grid grid-cols-3 mb-2">
@@ -1285,6 +1280,7 @@ Arrêt du robot : robot3@10.229.32.29:1099/JADE</init></pre>
         </div>
       </div>
     </div>
+
     <footer class="flex items-center justify-center bg-transparent py-4">
       <a href="mailto:mathis-durand@outlook.com" target="_blank">
         <button class="btn btn-md btn-outline mr-2">
@@ -1338,5 +1334,36 @@ window.onclick = function(event) {
     document.querySelectorAll('.container')[0].style.overflow = 'auto';
   }
 }
+
+document.getElementById('careerInput').addEventListener('click', function() {
+  var collapse = document.getElementById('careerCollapseContent').style;
+  if (document.getElementById('careerInput').checked) {
+    collapse.height = "50vh";
+    collapse.overflow = "scroll";
+  } else {
+    collapse.height = "0vh";
+  }
+});
+
+document.getElementById('projectsInput').addEventListener('click', function() {
+  var collapse = document.getElementById('projectsCollapseContent').style;
+  if (document.getElementById('projectsInput').checked) {
+    collapse.height = "50vh";
+    collapse.overflow = "scroll";
+  } else {
+    collapse.height = "0vh";
+  }
+});
+
+document.getElementById('skillsInput').addEventListener('click', function() {
+  var collapse = document.getElementById('skillsCollapseContent').style;
+  if (document.getElementById('skillsInput').checked) {
+    collapse.height = "50vh";
+    collapse.overflow = "scroll";
+  } else {
+    collapse.height = "0vh";
+  }
+});
+
 </script>
 </html>
