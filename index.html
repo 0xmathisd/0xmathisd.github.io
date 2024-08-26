@@ -261,7 +261,7 @@ pre {
 
     <div class="flex divider flex-nowrap h-fit max-w-3xl mx-auto w-[95vw]"></div>
   
-    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2">
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl mx-auto py-2">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
@@ -460,7 +460,7 @@ pre {
       </div>
     </div>
 
-    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2">
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl mx-auto py-2">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
@@ -1497,7 +1497,7 @@ Arrêt du robot : robot3@10.229.32.29:1099/JADE</init></pre>
       </div>
     </div>
 
-    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl max-h-[90vh] md:max-h-[70vh] mx-auto py-2">
+    <div style="margin-bottom: 0.5em;" class="grid max-w-3xl md:max-h-[70vh] mx-auto py-2">
       <div class="container">
         <div class="gap-1 join join-vertical">
           <div class="collapse collapse-arrow">
@@ -1670,36 +1670,6 @@ window.onclick = function(event) {
     document.querySelectorAll('.container')[0].style.overflow = 'auto';
   }
 }
-
-document.getElementById('careerInput').addEventListener('click', function() {
-  var collapse = document.getElementById('careerCollapseContent').style;
-  if (document.getElementById('careerInput').checked) {
-    collapse.height = "50vh";
-    collapse.overflow = "scroll";
-  } else {
-    collapse.height = "0vh";
-  }
-});
-
-document.getElementById('projectsInput').addEventListener('click', function() {
-  var collapse = document.getElementById('projectsCollapseContent').style;
-  if (document.getElementById('projectsInput').checked) {
-    collapse.height = "50vh";
-    collapse.overflow = "scroll";
-  } else {
-    collapse.height = "0vh";
-  }
-});
-
-document.getElementById('skillsInput').addEventListener('click', function() {
-  var collapse = document.getElementById('skillsCollapseContent').style;
-  if (document.getElementById('skillsInput').checked) {
-    collapse.height = "50vh";
-    collapse.overflow = "scroll";
-  } else {
-    collapse.height = "0vh";
-  }
-});
 
 </script>
 </html>
